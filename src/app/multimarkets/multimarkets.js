@@ -64,11 +64,8 @@ angular.module( 'ripplecharts.multimarkets', [
     if (online) {
       remote.connect();  
       setTimeout(function(){ //put this in to prevent getting "unable to load data"
-        console.log("reconnected");
         markets.reload();
       }, 100);
-         
-    
     } else {
       remote.disconnect();       
     }
